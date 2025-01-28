@@ -31,7 +31,7 @@ def menu():
 def main():
     
     menu_option = menu()
-    if not menu_option
+    print("test123456789")
 
 if __name__ == '__main__':
     main()
