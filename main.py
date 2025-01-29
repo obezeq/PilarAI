@@ -21,6 +21,7 @@ def menu():
     print("[6] Terror")
     print("[7] Aventura")
     print("[8] Poesía")
+    
 
     choice = input("~> ").strip().replace(' ', '').lower()
 
@@ -31,8 +32,8 @@ def menu():
 def main():
     
     menu_option = menu()
-    print("test123456789")
-    print("lol")
+    
+    print("lmao")
 
 if __name__ == '__main__':
     main()
