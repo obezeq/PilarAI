@@ -32,6 +32,7 @@ def main():
     
     menu_option = menu()
     print("test123456789")
+    print("lol")
 
 if __name__ == '__main__':
     main()
