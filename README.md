@@ -50,12 +50,12 @@
 ---
 
 ## 🏆 **¿Por Qué PilarAI es Mejor que ChatGPT?**  
-| **Característica**       | **Otras IA**          | **PilarAI**                |  
-|--------------------------|-----------------------|----------------------------|  
-| **Personalización**      | Básica                | Hiperadaptativa por materia|  
-| **Anti-Detección**       | Fácil de identificar  | Texto 100% "humano"        |  
-| **Aprendizaje Integrado**| Nulo                  | Explicaciones + Desafíos   |  
-| **Enfoque Educativo**    | Hacer tareas          | **Enseñar mientras hace**  |  
+| **Característica**       | **Otras IA**                       | **PilarAI**                |
+|--------------------------|------------------------------------|----------------------------|
+| **Personalización**      | Básica                             | Hiperadaptativa por materia|
+| **Anti-Detección**       | Fácil de identificar               | Texto 100% "humano"        |
+| **Aprendizaje Integrado**| Nulo                               | Explicaciones + Desafíos   |
+| **Enfoque Educativo**    | Tareas de baja calidad             | **Enseñar mientras hace**  |
 
 ---
 
