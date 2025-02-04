@@ -82,7 +82,7 @@
 
 - Clona el repositorio
 ```bash
-git clone https://github.com/tuusuario/PilarAI.git
+git clone https://github.com/obezeq/PilarAI.git
 ```
 
 - Ejecuta el programa
