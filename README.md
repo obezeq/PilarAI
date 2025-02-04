@@ -23,7 +23,7 @@
 - **Búsqueda Inteligente 🔍**: Cross-checking inteligente de fuentes confiables (¡adiós, Wikipedia dudosa!).  
 
 ### 🎨 **PDF HyperCustom**
-- **Diseña tu plantilla PDF** (colorido, minimalista, académico... ¡o estilo *Cyberpunk 2077*!).
+- **Diseña tu plantilla PDF**: (colorido, minimalista, académico... ¡o estilo *Cyberpunk 2077*!) donde la tarea estará realizada para poder ser entregada.
 - **Niveles de Escritura**:
   Depende del nivel de escritura la inteligencia artificial generará la tarea de una forma en la que parezca que lo ha escrito un alumno del nivel adecuado en el que se encuentre.
   - 🧒 "Mi perro se comió mi tarea" (Primaria)  
