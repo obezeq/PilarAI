@@ -26,7 +26,7 @@
 - **Diseña tu plantilla PDF**: (colorido, minimalista, académico... ¡o estilo *Cyberpunk 2077*!) donde la tarea estará realizada para poder ser entregada.
 - **Niveles de Escritura**:
   Depende del nivel de escritura la inteligencia artificial generará la tarea de una forma en la que parezca que lo ha escrito un alumno del nivel adecuado en el que se encuentre.
-  - 🧒 "Mi perro se comió mi tarea" (Primaria)  
+  - 🧒🐶 "Mi perro se comió mi tarea" (Primaria)  
   - 🧑🎓 "Análisis crítico de la teoría cuántica" (Bachillerato)
   - 👨🔬 "Simulación de fluidos con ecuaciones de Navier-Stokes" (Universidad)
 - **Anti-Detección Ninja 🥷**: Textos tan humanos que hasta dudarás si *tú* lo escribiste.  
