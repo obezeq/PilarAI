@@ -71,11 +71,11 @@
 ## 💻 **¡Pruebalo ahora!**  
 ¿Eres desarrollador, diseñador o educador? **¡Únete!**  
 
-- Instala Python 3
+- Instala **Python 3**
   - [Descarga la última versión estable de Python 3 AQUÍ](https://www.python.org/downloads/)
   - En el instalador activa la opción PATH para que Python 3 se agregue a las variables de entorno.
 
-- Instala Git
+- Instala **Git**
   - [Descarga la última versión estable de Git AQUÍ](https://git-scm.com/downloads)
 
 - Abre una terminal en la carpeta donde quieras descargar la IA.
