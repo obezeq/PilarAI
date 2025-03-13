@@ -71,12 +71,31 @@
 ## 💻 **¡Pruebalo ahora!**  
 ¿Eres desarrollador, diseñador o educador? **¡Únete!**  
 
+### 🚀 Instalación
+
+**Requisitos**
 - Instala **Python 3**
   - [Descarga la última versión estable de Python 3 AQUÍ](https://www.python.org/downloads/)
   - En el instalador activa la opción PATH para que Python 3 se agregue a las variables de entorno.
 
 - Instala **Git**
   - [Descarga la última versión estable de Git AQUÍ](https://git-scm.com/downloads)
+
+- Cuenta en OpenAI
+
+
+## 🚀 Instalación
+
+### Requisitos
+**Requisitos**
+- Instala **Python 3**
+  - [Descarga la última versión estable de Python 3 AQUÍ](https://www.python.org/downloads/)
+  - En el instalador activa la opción PATH para que Python 3 se agregue a las variables de entorno.
+
+- Instala **Git**
+  - [Descarga la última versión estable de Git AQUÍ](https://git-scm.com/downloads)
+
+- Cuenta en [OpenAI](https://platform.openai.com/)
 
 - Abre una terminal en la carpeta donde quieras descargar la IA.
 
@@ -89,3 +108,131 @@ git clone https://github.com/obezeq/PilarAI.git
 ```bash
 python main.py
 ```
+
+### Dependencias
+```bash
+pip install openai python-dotenv markdown fpdf2 beautifulsoup4
+```
+
+## ⚙️ Configuración Inicial
+
+1. **Crea un archivo `.env`** en la raíz del proyecto:
+```env
+OPENAI_API_KEY=tu_clave_openai_aqui
+```
+
+2. **Crea la estructura de carpetas**:
+```
+├── config/
+│   ├── template.json
+│   └── usuario.json
+├── resultados/
+```
+
+3. **Configura tu plantilla** (`config/template.json`):
+```json
+{
+    "estilos": {
+        "color_texto": "#333333",
+        "colores_encabezados": {
+            "primario": "#2c3e50",
+            "secundario": "#34495e",
+            "terciario": "#4a6572"
+        },
+        "tamanios": {
+            "h1": 24,
+            "h2": 20,
+            "h3": 16
+        }
+    },
+    "encabezado": {
+        "titulo": "Trabajo Académico"
+    }
+}
+```
+
+4. **Configura tus datos** (`config/usuario.json`):
+```json
+{
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "curso": "Informática 2024"
+}
+```
+
+## 🖥️ Uso
+
+1. Ejecuta el programa:
+```bash
+python main.py
+```
+
+2. Ingresa tu tarea cuando se solicite:
+```
+📝 Ingresa la tarea que necesitas resolver:
+> Explica los componentes principales de un sistema operativo
+```
+
+3. Los resultados se guardarán en:
+```
+resultados/
+├── solucion.txt
+└── solucion.pdf
+```
+
+## 🎨 Personalización de Plantillas
+
+### Estilos disponibles en `template.json`:
+| Campo                 | Descripción                          | Ejemplo       |
+|-----------------------|--------------------------------------|---------------|
+| `color_texto`         | Color hexadecimal del texto principal | `"#333333"`   |
+| `colores_encabezados` | Colores para h1, h2, h3              | `"#2c3e50"`   |
+| `tamanios`            | Tamaños de fuente en puntos          | `24` (h1)     |
+
+### Ejemplo de PDF generado:
+```
+Trabajo Académico
+=========================
+
+Componentes de un Sistema Operativo
+
+Los sistemas operativos modernos están compuestos por...
+
+1. Kernel
+   - Administra recursos del hardware
+   - Controla procesos y memoria
+
+2. Interfaz de Usuario
+   • CLI (Línea de comandos)
+   • GUI (Interfaz gráfica)
+```
+
+## 🛠️ Solución de Problemas Comunes
+
+### Error de API Key:
+```bash
+❌ Error: Falta la API Key. Verifica tu archivo .env
+```
+- Solución: Asegúrate de que la clave en `.env` es válida y está bien escrita
+
+### Formato PDF incorrecto:
+```bash
+❌ Error: No se encuentra la fuente Arial
+```
+- Solución: Usa fuentes estándar o descarga archivos .ttf en la carpeta `fonts/`
+
+### Caracteres especiales mal formados:
+- Asegúrate de usar encoding UTF-8 en todos los archivos:
+```python
+with open("archivo.txt", "w", encoding="utf-8") as f:
+```
+
+## 📌 Mejoras Futuras
+- [ ] Mejora masiva para creación de tareas diferentes asignaturas
+- [ ] Selector interactivo de plantillas
+- [ ] Soporte para imágenes en PDF
+- [ ] Exportación a formato DOCX
+- [ ] Sistema de historial de tareas
+- [ ] Anti Anti-AI Bypassers 100% Humanizer
+
+---
