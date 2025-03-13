@@ -1,0 +1,24 @@
+{
+    "estilos": {
+        "fuente_principal": "Roboto",
+        "color_texto": "#333333",
+        "colores_encabezados": {
+            "primario": "#2c3e50",
+            "secundario": "#34495e",
+            "terciario": "#4a6572"
+        },
+        "tamanios": {
+            "h1": 24,
+            "h2": 20,
+            "h3": 16
+        }
+    },
+    "encabezado": {
+        "titulo": "Mi Trabajo Académico"
+    },
+    "pie_pagina": {
+        "estilo": {
+            "color": "#666666"
+        }
+    }
+}
