@@ -1,6 +1,3 @@
-Here's the updated README with your requested changes:
-
-```markdown
 # 🚀 **PilarAI: The Smart Learning Revolution** 🌟  
 *Where AI doesn't just do your homework - it makes you a GENIUS!*  
 
@@ -10,10 +7,9 @@ Here's the updated README with your requested changes:
 
 ---
 
-## 📖 Documentation
-**Explore our comprehensive documentation:**
-- [🌐 Live Demo & Documentation](https://obezeq.github.io/PilarAI/wiki)
-- [📚 GitHub Wiki](https://github.com/obezeq/PilarAI/wiki)
+## 📖 Wiki Page Documentation
+**Checkout the official PilarAI Wiki Documentation Page**
+- [https://obezeq.github.io/PilarAI/](https://obezeq.github.io/PilarAI/)
 
 ## 🔥 **What is PilarAI?**  
 **PilarAI isn't just another homework AI.** It's your **ultimate digital mentor**, designed to free your time, push academic boundaries, and ensure **real learning!**  
@@ -24,45 +20,161 @@ Here's the updated README with your requested changes:
 ---
 
 ## 🛠️ **EPIC Features**  
-*(Content unchanged, kept for context)*
+
+### 📚 **Multidisciplinary & Adaptive**  
+- **Master any subject!** Computer systems, programming, literature, biology, physics... Even Riemann Hypothesis solutions!  
+- **Deep Thinking Mode 🧠**: Analyze, synthesize, and create solutions with flawless logic.  
+- **Smart Verification 🔍**: Intelligent cross-checking with reliable sources (goodbye questionable Wikipedia!).  
+
+### 🎨 **HyperCustom PDF**  
+- **Design your PDF template**: Colorful, minimalist, academic... or even *Cyberpunk 2077* style!  
+- **Writing Levels**:  
+  AI adapts output to match appropriate student level:  
+  - 🧒🐶 "My dog ate my homework" (Elementary)  
+  - 🧑🎓 "Critical analysis of quantum theory" (High School)  
+  - 👨🔬 "Fluid simulation with Navier-Stokes equations" (University)  
+- **Anti-Detection Ninja 🥷**: Human-like text that even you'll doubt you wrote.  
+
+### 🚨 **Explosive Learning!**  
+- **Key Explanations 🔑**: Step-by-step breakdowns after generating solutions.  
+- **Lightning Challenges ⚡**: Mini-quizzes based on your work. Prove you're not a bot!  
+- **Teacher Mode 👩🏫**: Perfect for educators creating cheat-proof assignments.  
 
 ---
 
-## 🎯 **Quick Start Guide**
+## 🌐 **How It Works**  
+1. **📥 User Input**: Submit your task, select subject and difficulty.  
+2. **⚙️ Epic Processing**:  
+   - AI analysis with real-time source verification  
+   - Specialized language models for each subject  
+3. **📄 PDF Generation**: Customize fonts, colors, and layouts.  
+4. **🧠 Learning Mode**: Study interactive explanations and solve challenges.  
+5. **🚀 Submit & Conquer!**  
 
-### 💻 Basic Usage
-1. Run the program:
+---
+
+## 🏆 **Why PilarAI Beats ChatGPT**  
+| **Feature**            | **Other AI**               | **PilarAI**              |
+|------------------------|----------------------------|--------------------------|
+| **Customization**      | Basic                      | Hyper-adaptive           |
+| **Anti-Detection**     | Easy to spot               | 100% "human" text        |
+| **Built-in Learning**  | None                       | Explanations + Challenges|
+| **Education Focus**    | Low-quality work           | **Teach while doing**    |
+
+---
+
+## 🔮 **Future Roadmap**
+- **🤖 Web-Based Work Generation**: Interactive task creation via web interface
+- **🏦 Template Marketplace**: Premium PDF templates and teacher resources
+- **🗣️ Pro Visual Explanations**: Interactive videos, audio guides & metaverse integration
+- **🌍 50+ Language Support**: Including Latin, Greek, Chinese & Klingon!
+- **📊 Teacher Analytics**: Detect usage patterns and improve classes
+
+---
+
+## 💻 **Try It Now!**  
+Developers, designers, and educators - **Join us!**  
+
+### 🚀 Installation
+
+**Requirements**
+- **Python 3**  
+  [Download latest Python 3](https://www.python.org/downloads/)  
+  *Enable PATH during installation*
+
+- **Git**  
+  [Download Git](https://git-scm.com/downloads)  
+
+- [OpenAI Account](https://platform.openai.com/)  
+
+**Terminal Commands**  
+```bash
+git clone https://github.com/obezeq/PilarAI.git
+cd PilarAI
+python main.py
+```
+
+**Dependencies**  
+```bash
+pip install openai python-dotenv markdown fpdf2 beautifulsoup4
+```
+
+---
+
+## ⚙️ Configuration
+
+1. Create `.env` file:  
+```env
+OPENAI_ORGANIZATION=your_openai_organization_key_here
+OPENAI_PROJECT=your_openai_project_key_here
+OPENAI_API_KEY=your_openai_key_here
+```
+
+2. File structure:  
+```
+├── config/
+│   ├── template.json
+│   └── user.json
+├── results/
+```
+
+3. Template Configuration (`config/template.json`):  
+```json
+{
+    "styles": {
+        "main_font": "Arial",
+        "text_color": "#333333",
+        "header_colors": {
+            "primary": "#2c3e50",
+            "secondary": "#34495e",
+            "tertiary": "#4a6572"
+        },
+        "sizes": {
+            "h1": 24,
+            "h2": 20,
+            "h3": 16
+        }
+    },
+    "header": {
+        "title": "My Academic Work"
+    },
+    "footer": {
+        "style": {
+            "color": "#666666"
+        }
+    }
+}
+```
+
+4. User Data (`config/user.json`):  
+```json
+{
+    "firstName": "Hiram",
+    "lastName": "Abiff",
+    "course": "1stDAW B"
+}
+```
+
+---
+
+## 🖥️ Usage
+
+1. Run:  
 ```bash
 python main.py
 ```
 
-2. Enter your academic task when prompted:
-```bash
+2. Enter your task:  
+```
 📝 Enter the task you need to solve:
-> [Your question here]
+> List utilities related to information management that you would recommend to install and explain why you have chosen them (minimum 5 utilities).
 ```
 
-3. Find generated files in `/results` folder:
-```bash
+3. Results saved in:  
+```
 results/
-├── solution.txt  # Markdown formatted solution
-└── solution.pdf  # Professionally formatted PDF
-```
-
-### 🌐 Viewing Results
-**Windows:**
-```cmd
-explorer results
-```
-
-**macOS:**
-```bash
-open results
-```
-
-**Linux:**
-```bash
-xdg-open results
+├── solution.txt # Markdown formatted solution
+└── solution.pdf # Professionally formatted PDF
 ```
 
 ---
@@ -83,19 +195,16 @@ xdg-open results
 ```
 
 ### Generated Files Preview
-**solution.txt** ([view sample](https://obezeq.github.io/PilarAI/sample_solution)):
+**solution.txt** ([view sample](https://github.com/obezeq/PilarAI/blob/main/results/solution.txt)):
 ```markdown
-# Information Management Utilities
+# Recommended Utilities for Information Management
 
-## 1. Notion
-- All-in-one workspace for notes, tasks, and databases
-- Cross-platform synchronization...
+Information Management (IM) is a crucial aspect of any organization or business. It involves organizing, retrieving, acquiring, and maintaining information. It is essential for decision-making processes and overall operational efficiency. There are numerous utilities designed to aid in this process; the following are five I would highly recommend:
 
-## 2. Zotero
-- Reference management tool with...
+[...]
 ```
 
-**solution.pdf** ([view sample PDF](https://obezeq.github.io/PilarAI/sample.pdf))  
+**solution.pdf** ([view sample PDF](https://github.com/obezeq/PilarAI/blob/main/results/solution.pdf))  
 *Professional PDF with your institutional formatting*
 
 ---
@@ -103,7 +212,7 @@ xdg-open results
 ## 🖥️ **Multi-Platform Support**
 
 ### Windows Users
-1. Install [Python from Microsoft Store](https://apps.microsoft.com/detail/python/9NRWMJP3717K)
+1. Install [Python from Microsoft Store](https://apps.microsoft.com/search?query=Python+3)
 2. Right-click in project folder → "Open in Terminal"
 3. Follow standard instructions
 
@@ -127,63 +236,32 @@ python3 main.py
 
 ---
 
-## ⚙️ Configuration Updates
+## 🛠️ Troubleshooting
 
-### Simplified .env File
-```env
-OPENAI_API_KEY=your_key_here
-```
-
-### Updated Folder Structure
-```
-PilarAI/
-├── config/
-│   ├── template.json  # PDF styling
-│   └── user.json      # Your personal info
-├── fonts/             # Add custom fonts here
-├── results/           # Auto-created outputs
-└── main.py            # Start here!
-```
-
----
-
-## 🛠️ Enhanced Troubleshooting
-
-### Common Solutions
-**PDF Not Generating?**
-- Ensure write permissions in `/results` folder
-- Verify Arial fonts exist in `/fonts`
-
-**Text Encoding Issues**
+**API Key Error**  
 ```bash
-# On Linux/macOS:
-export PYTHONUTF8=1
+❌ Error: Missing API Key. Verify .env file
+```
+*Solution: Ensure valid OpenAI key in .env*
 
-# On Windows:
-set PYTHONUTF8=1
+**Font Issues**  
+```bash
+❌ Error: Arial font not found
+```
+*Solution: Add .ttf files to fonts/ folder*
+
+**Encoding Issues**  
+*Always use:*  
+```python
+with open("file.txt", "w", encoding="utf-8") as f:
 ```
 
 ---
 
-## 📌 What's Next?
-*(Content unchanged, kept for context)*
-
----
-
-<div align="center">
-  <br>
-  <em>Empowering students since 2024 📚🚀</em>
-</div>
-```
-
-Key changes made:
-1. Added detailed usage examples with actual session demo
-2. Included platform-specific instructions for Windows/macOS/Linux
-3. Added cloud execution example with Google Colab
-4. Simplified configuration requirements
-5. Added direct links to sample outputs
-6. Enhanced troubleshooting section
-7. Improved folder structure visualization
-8. Added quick access commands for opening results
-9. Maintained all existing functionality documentation
-10. Removed deprecated configuration options
+## 📌 Future Improvements
+- [ ] Enhanced multi-subject support
+- [ ] Interactive template selector
+- [ ] Image support in PDFs
+- [ ] DOCX export
+- [ ] Task history system
+- [ ] 100% Humanizer Anti-AI Detection
