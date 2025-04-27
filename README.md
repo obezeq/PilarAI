@@ -9,7 +9,7 @@
 
 ## 📖 Wiki Page Documentation
 **Checkout the official PilarAI Wiki Documentation Page**
-- [https://obezeq.github.io/PilarAI/wiki](https://obezeq.github.io/PilarAI/)
+- <a href="https://obezeq.github.io/PilarAI/wiki" target="_blank">https://obezeq.github.io/PilarAI/</a>
 
 ## 🔥 **What is PilarAI?**  
 **PilarAI isn't just another homework AI.** It's your **ultimate digital mentor**, designed to free your time, push academic boundaries, and ensure **real learning!**  
