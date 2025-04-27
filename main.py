@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """
 PilarAI - Smart Academic Assistant Main Module
 
