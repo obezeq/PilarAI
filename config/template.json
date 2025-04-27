@@ -1,23 +1,23 @@
 {
-    "estilos": {
-        "fuente_principal": "Roboto",
-        "color_texto": "#333333",
-        "colores_encabezados": {
-            "primario": "#2c3e50",
-            "secundario": "#34495e",
-            "terciario": "#4a6572"
+    "styles": {
+        "main_font": "Arial",
+        "text_color": "#333333",
+        "header_colors": {
+            "primary": "#2c3e50",
+            "secondary": "#34495e",
+            "tertiary": "#4a6572"
         },
-        "tamanios": {
+        "sizes": {
             "h1": 24,
             "h2": 20,
             "h3": 16
         }
     },
-    "encabezado": {
-        "titulo": "Mi Trabajo Académico"
+    "header": {
+        "title": "My Academic Work"
     },
-    "pie_pagina": {
-        "estilo": {
+    "footer": {
+        "style": {
             "color": "#666666"
         }
     }

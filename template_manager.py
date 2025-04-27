@@ -13,7 +13,7 @@ def load_user_data(path):
     return user_data
 
 def validate_template(template):
-    required_fields = ['estilos', 'encabezado', 'pie_pagina']
+    required_fields = ['styles', 'header', 'footer']
     for field in required_fields:
         if field not in template:
-            raise ValueError(f"Plantilla inválida: Falta el campo '{field}'")
+            raise ValueError(f"Invalid template: Missing required field '{field}'")

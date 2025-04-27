@@ -13,17 +13,52 @@ class PDF(FPDF):
         self.setup_styles()
         
     def setup_fonts(self):
-        self.add_font("Arial", style="", fname="fonts/arial.ttf", uni=True)
-        self.add_font("Arial", style="B", fname="fonts/arialbd.ttf", uni=True)
-        self.set_font("Arial", "", 12)
+        main_font = self.template['styles']['main_font']
+        try:
+            self.add_font(main_font, style="", fname=f"fonts/{main_font.lower()}.ttf", uni=True)
+            self.add_font(main_font, style="B", fname=f"fonts/{main_font.lower()}bd.ttf", uni=True)
+        except:
+            self.add_font("Arial", style="", fname="fonts/arial.ttf", uni=True)
+            self.add_font("Arial", style="B", fname="fonts/arialbd.ttf", uni=True)
+        self.set_font(self.template['styles']['main_font'], "", 12)
     
     def setup_styles(self):
         self.styles = {
-            'h1': {'size': 24, 'color': '#2c3e50'},
-            'h2': {'size': 20, 'color': '#34495e'},
-            'h3': {'size': 16, 'color': '#4a6572'},
-            'body': {'size': 12, 'color': '#333333'}
+            'h1': {
+                'size': self.template['styles']['sizes']['h1'],
+                'color': self.template['styles']['header_colors']['primary']
+            },
+            'h2': {
+                'size': self.template['styles']['sizes']['h2'],
+                'color': self.template['styles']['header_colors']['secondary']
+            },
+            'h3': {
+                'size': self.template['styles']['sizes']['h3'],
+                'color': self.template['styles']['header_colors']['tertiary']
+            },
+            'body': {
+                'size': 12,
+                'color': self.template['styles']['text_color']
+            }
         }
+        
+    def header(self):
+        # Add user information header
+        header_text = (
+            f"{self.user_data['firstName']} {self.user_data['lastName']} | "
+            f"{self.user_data['course']} | "
+            f"{datetime.now().strftime('%Y-%m-%d')}"
+        )
+        self.set_font(self.template['styles']['main_font'], 'B', 14)
+        self.set_text_color(*self.hex_to_rgb(self.template['styles']['header_colors']['primary']))
+        self.cell(0, 10, header_text, border=0, ln=1, align='C')
+        self.ln(10)
+
+    def footer(self):
+        self.set_y(-15)
+        self.set_font(self.template['styles']['main_font'], 'I', 8)
+        self.set_text_color(*self.hex_to_rgb(self.template['footer']['style']['color']))
+        self.cell(0, 10, f"Page {self.page_no()}", 0, 0, 'C')
         
     def add_markdown_content(self, md_content):
         html = markdown(md_content)

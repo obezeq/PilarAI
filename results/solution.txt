@@ -1,0 +1,49 @@
+# Utilidades de Gestión de Información Recomendadas
+
+La gestión de información es fundamental para cualquier actividad académica, profesional o personal. A continuación, se enumeran algunas utilidades que pueden ayudar a mejorar la eficiencia y la eficacia de la gestión de información.
+
+## 1. Evernote
+
+Evernote es una aplicación que permite la captura de información en varios formatos, incluyendo texto, imágenes, audio y video. 
+
+**Por qué recomendaría Evernote**:
+- Permite la organización de notas en libretas y etiquetas.
+- Puede sincronizarse entre varios dispositivos.
+- Permite la búsqueda de texto dentro de imágenes.
+- Tiene una función de recordatorios.
+
+## 2. Google Drive
+
+Google Drive es un servicio de almacenamiento en la nube que permite guardar, compartir, y acceder a archivos desde cualquier dispositivo.
+
+**Por qué recomendaría Google Drive**:
+- Permite el acceso a los archivos en cualquier momento y lugar.
+- Facilita la colaboración en tiempo real en documentos, hojas de cálculo y presentaciones.
+- Ofrece 15 GB de almacenamiento gratuito.
+
+## 3. Trello
+
+Trello es una herramienta de gestión de proyectos que utiliza tableros, listas y tarjetas para organizar y priorizar tareas y proyectos.
+
+**Por qué recomendaría Trello**:
+- Ofrece una visión clara del estado de los proyectos.
+- Promueve la colaboración y la asignación de tareas.
+- Es adaptable a diferentes metodologías de trabajo, como Scrum o Kanban.
+
+## 4. Zotero
+
+Zotero es un gestor de referencias bibliográficas, ideal para trabajos académicos y de investigación.
+
+**Por qué recomendaría Zotero**:
+- Permite recoger, organizar, citar y compartir fuentes de investigación.
+- Se integra con navegadores web y procesadores de texto.
+- Soporta más de 9.000 estilos de citas.
+
+## 5. Slack
+
+Slack es una plataforma de comunicación para equipos que agrupa los mensajes en canales.
+
+**Por qué recomendaría Slack**:
+- Mejora la comunicación interna del equipo.
+- Permite la integración con otras herramientas como Google Drive o Trello.
+- Facilita la búsqueda de conversaciones y archivos compartidos.

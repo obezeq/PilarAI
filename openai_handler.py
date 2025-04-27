@@ -7,19 +7,19 @@ load_dotenv()
 def generate_solution(task):
     client = OpenAI(
         api_key=os.getenv("OPENAI_API_KEY"),
-        organization=os.getenv("OPENAI_ORGANIZATION", ""),  # Parámetro opcional
-        project=os.getenv("OPENAI_PROJECT", "")  # Parámetro opcional
+        organization=os.getenv("OPENAI_ORGANIZATION", ""),
+        project=os.getenv("OPENAI_PROJECT", "")
     )
     
     if not client.api_key:
-        raise ValueError("Falta la API Key. Crea un archivo .env con OPENAI_API_KEY=tu_clave")
+        raise ValueError("Missing API Key. Create a .env file with OPENAI_API_KEY=your_key")
     
     response = client.chat.completions.create(
         model="gpt-4",
         messages=[
             {
                 "role": "system", 
-                "content": "Eres un asistente académico experto. Genera respuestas detalladas en Markdown usando # para títulos principales, ## para subtítulos, - para listas, **negritas** y *cursivas*. Incluye explicaciones completas."
+                "content": "You are an expert academic assistant. Generate detailed answers in Markdown using # for main titles, ## for subtitles, - for lists, **bold** and *italic* text. Include complete explanations."
             },
             {"role": "user", "content": task}
         ],
@@ -27,4 +27,4 @@ def generate_solution(task):
         max_tokens=2000
     )
     
-    return response.choices[0].message.content  # Acceso correcto al contenido
+    return response.choices[0].message.content

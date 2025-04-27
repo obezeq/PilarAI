@@ -2,43 +2,45 @@ import openai_handler
 import template_manager
 import pdf_generator
 import json
+import os
 
 def main():
-    # Configuración inicial
-    print("🚀 Bienvenido a PilarAI - Tu asistente académico inteligente\n")
+    # Initial configuration
+    print("🚀 Welcome to PilarAI - Your smart academic assistant\n")
     
-    # Cargar plantilla
+    # Load template
     try:
         template = template_manager.load_template("config/template.json")
     except FileNotFoundError:
-        print("Error: No se encontró el archivo de plantilla en config/template.json")
+        print("Error: Template file not found in config/template.json")
         return
     
-    # Obtener tarea del usuario
-    task = input("📝 Ingresa la tarea que necesitas resolver:\n> ")
+    # Get user task
+    task = input("📝 Enter the task you need to solve:\n> ")
     
-    # Generar solución con OpenAI
-    print("\n⚡ Generando solución...")
+    # Generate solution with OpenAI
+    print("\n⚡ Generating solution...")
     try:
         markdown_content = openai_handler.generate_solution(task)
-        with open("resultados/solucion.txt", "w", encoding="utf-8") as f:
+        os.makedirs("results", exist_ok=True)
+        with open("results/solution.txt", "w", encoding="utf-8") as f:
             f.write(markdown_content)
     except Exception as e:
-        print(f"Error al generar la solución: {str(e)}")
+        print(f"Error generating solution: {str(e)}")
         return
     
-    # Generar PDF
-    print("🎨 Creando documento PDF...")
+    # Generate PDF
+    print("🎨 Creating PDF document...")
     try:
-        user_data = template_manager.load_user_data("config/usuario.json")
-        pdf_generator.create_pdf(markdown_content, template, user_data, "resultados/solucion.pdf")
+        user_data = template_manager.load_user_data("config/user.json")
+        pdf_generator.create_pdf(markdown_content, template, user_data, "results/solution.pdf")
     except Exception as e:
         print(f"\n❌ Error: {str(e)}")
         import traceback
         traceback.print_exc()
         return
     
-    print("\n✅ ¡Tarea completada! Revisa los archivos en la carpeta 'resultados'")
+    print("\n✅ Task completed! Check the files in the 'results' folder")
 
 if __name__ == "__main__":
     main()
