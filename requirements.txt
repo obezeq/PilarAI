@@ -1,1 +1,6 @@
+openai
+python-dotenv
+fpdf
+markdown
+beautifulsoup4
 libgobject-2.0-0
