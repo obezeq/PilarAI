@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; PilarAI 0.0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e3a6060d"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing Guide" href="contributing.html" />
+    <link rel="prev" title="System Architecture" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PilarAI
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">System Architecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-main">Core Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openai_handler.generate_solution"><code class="docutils literal notranslate"><span class="pre">generate_solution()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pdf_generator">PDF Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pdf_generator.PDF"><code class="docutils literal notranslate"><span class="pre">PDF</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.template"><code class="docutils literal notranslate"><span class="pre">PDF.template</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.user_data"><code class="docutils literal notranslate"><span class="pre">PDF.user_data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.current_indent"><code class="docutils literal notranslate"><span class="pre">PDF.current_indent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.styles"><code class="docutils literal notranslate"><span class="pre">PDF.styles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.setup_fonts"><code class="docutils literal notranslate"><span class="pre">PDF.setup_fonts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.setup_styles"><code class="docutils literal notranslate"><span class="pre">PDF.setup_styles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.header"><code class="docutils literal notranslate"><span class="pre">PDF.header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.footer"><code class="docutils literal notranslate"><span class="pre">PDF.footer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.add_markdown_content"><code class="docutils literal notranslate"><span class="pre">PDF.add_markdown_content()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.process_html"><code class="docutils literal notranslate"><span class="pre">PDF.process_html()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.parse_element"><code class="docutils literal notranslate"><span class="pre">PDF.parse_element()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.add_heading"><code class="docutils literal notranslate"><span class="pre">PDF.add_heading()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.add_paragraph"><code class="docutils literal notranslate"><span class="pre">PDF.add_paragraph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.process_list"><code class="docutils literal notranslate"><span class="pre">PDF.process_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.add_text"><code class="docutils literal notranslate"><span class="pre">PDF.add_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.reset_styles"><code class="docutils literal notranslate"><span class="pre">PDF.reset_styles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pdf_generator.PDF.hex_to_rgb"><code class="docutils literal notranslate"><span class="pre">PDF.hex_to_rgb()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pdf_generator.create_pdf"><code class="docutils literal notranslate"><span class="pre">create_pdf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-template_manager">Template Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#template_manager.load_template"><code class="docutils literal notranslate"><span class="pre">load_template()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template_manager.load_user_data"><code class="docutils literal notranslate"><span class="pre">load_user_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template_manager.validate_template"><code class="docutils literal notranslate"><span class="pre">validate_template()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Development Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PilarAI</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api_reference.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<section id="module-main">
+<span id="core-modules"></span><h2>Core Modules<a class="headerlink" href="#module-main" title="Link to this heading"></a></h2>
+<p>PilarAI - Smart Academic Assistant Main Module</p>
+<p>This module serves as the entry point for the PilarAI application. It coordinates:
+- Template loading
+- User input handling
+- AI solution generation
+- PDF document creation</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="main.main">
+<span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#main.main" title="Link to this definition"></a></dt>
+<dd><p>Main execution flow for PilarAI academic assistant application.</p>
+<p>Handles:
+1. Template configuration loading
+2. User task input collection
+3. AI-powered solution generation
+4. PDF document creation
+5. Error handling and user feedback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If template configuration files are missing</p></li>
+<li><p><strong>Exception</strong> – General errors during solution generation or PDF creation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p id="module-openai_handler">OpenAI Integration Module</p>
+<p>Handles communication with OpenAI’s API to generate academic solutions.
+Requires valid OpenAI API credentials in .env file.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="openai_handler.generate_solution">
+<span class="sig-name descname"><span class="pre">generate_solution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/openai_handler.html#generate_solution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#openai_handler.generate_solution" title="Link to this definition"></a></dt>
+<dd><p>Generates academic solution for given task using OpenAI’s GPT-4 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – User-provided academic task/question/problem statement</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Formatted Markdown solution</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>str</em></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If OpenAI API key is missing</p></li>
+<li><p><strong>Exception</strong> – For general API communication errors</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">generate_solution</span><span class="p">(</span><span class="s2">&quot;Explain quantum computing&quot;</span><span class="p">)</span>
+<span class="go">&quot;# Quantum Computing\n\nQuantum computing is...&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-pdf_generator">
+<span id="pdf-generation"></span><h2>PDF Generation<a class="headerlink" href="#module-pdf_generator" title="Link to this heading"></a></h2>
+<p>PDF Generation Module</p>
+<p>Creates styled PDF documents from Markdown content using:
+- FPDF2 for PDF creation
+- BeautifulSoup for HTML/Markdown parsing</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pdf_generator.PDF">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FPDF</span></code></p>
+<p>Custom PDF generator with academic styling and user data integration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pdf_generator.PDF.template">
+<span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#pdf_generator.PDF.template" title="Link to this definition"></a></dt>
+<dd><p>Document styling configuration</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pdf_generator.PDF.user_data">
+<span class="sig-name descname"><span class="pre">user_data</span></span><a class="headerlink" href="#pdf_generator.PDF.user_data" title="Link to this definition"></a></dt>
+<dd><p>User information for header/footer</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pdf_generator.PDF.current_indent">
+<span class="sig-name descname"><span class="pre">current_indent</span></span><a class="headerlink" href="#pdf_generator.PDF.current_indent" title="Link to this definition"></a></dt>
+<dd><p>Current list indentation level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pdf_generator.PDF.styles">
+<span class="sig-name descname"><span class="pre">styles</span></span><a class="headerlink" href="#pdf_generator.PDF.styles" title="Link to this definition"></a></dt>
+<dd><p>Predefined text styling configurations</p>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>)</p></li>
+<li><p><strong>user_data</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.setup_fonts">
+<span class="sig-name descname"><span class="pre">setup_fonts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.setup_fonts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.setup_fonts" title="Link to this definition"></a></dt>
+<dd><p>Configures document fonts with fallback to Arial.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.setup_styles">
+<span class="sig-name descname"><span class="pre">setup_styles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.setup_styles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.setup_styles" title="Link to this definition"></a></dt>
+<dd><p>Initializes document styles from template configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.header">
+<span class="sig-name descname"><span class="pre">header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.header"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.header" title="Link to this definition"></a></dt>
+<dd><p>Generates document header with user information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.footer">
+<span class="sig-name descname"><span class="pre">footer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.footer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.footer" title="Link to this definition"></a></dt>
+<dd><p>Generates document footer with page numbers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.add_markdown_content">
+<span class="sig-name descname"><span class="pre">add_markdown_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">md_content</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.add_markdown_content"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.add_markdown_content" title="Link to this definition"></a></dt>
+<dd><p>Converts Markdown content to PDF elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>md_content</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Markdown-formatted text content</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.process_html">
+<span class="sig-name descname"><span class="pre">process_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.process_html"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.process_html" title="Link to this definition"></a></dt>
+<dd><p>Parses HTML content and converts to PDF elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>html</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – HTML content to process</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.parse_element">
+<span class="sig-name descname"><span class="pre">parse_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.parse_element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.parse_element" title="Link to this definition"></a></dt>
+<dd><p>Recursively processes HTML elements for PDF conversion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> – BeautifulSoup element to process</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.add_heading">
+<span class="sig-name descname"><span class="pre">add_heading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.add_heading"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.add_heading" title="Link to this definition"></a></dt>
+<dd><p>Adds styled heading to PDF document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Heading text content</p></li>
+<li><p><strong>level</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Heading level (1-3)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.add_paragraph">
+<span class="sig-name descname"><span class="pre">add_paragraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.add_paragraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.add_paragraph" title="Link to this definition"></a></dt>
+<dd><p>Adds standard paragraph text to PDF document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Paragraph content</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.process_list">
+<span class="sig-name descname"><span class="pre">process_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.process_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.process_list" title="Link to this definition"></a></dt>
+<dd><p>Processes HTML list elements with proper indentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element</strong> – BeautifulSoup list element</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.add_text">
+<span class="sig-name descname"><span class="pre">add_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.add_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.add_text" title="Link to this definition"></a></dt>
+<dd><p>Adds formatted text to PDF document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Text content to add</p></li>
+<li><p><strong>style</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Font style (B/I/U)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.reset_styles">
+<span class="sig-name descname"><span class="pre">reset_styles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.reset_styles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.reset_styles" title="Link to this definition"></a></dt>
+<dd><p>Resets text styling to default body style.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pdf_generator.PDF.hex_to_rgb">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hex_to_rgb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hex_color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#PDF.hex_to_rgb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.PDF.hex_to_rgb" title="Link to this definition"></a></dt>
+<dd><p>Converts hexadecimal color code to RGB tuple.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>hex_color</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Color code in #RRGGBB format</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(R, G, B) values (0-255)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>tuple</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pdf_generator.create_pdf">
+<span class="sig-name descname"><span class="pre">create_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">md_content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pdf_generator.html#create_pdf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pdf_generator.create_pdf" title="Link to this definition"></a></dt>
+<dd><p>Generates PDF document from Markdown content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>md_content</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Markdown-formatted text</p></li>
+<li><p><strong>template</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Style configuration dictionary</p></li>
+<li><p><strong>user_data</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – User information dictionary</p></li>
+<li><p><strong>output_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Destination path for PDF file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-template_manager">
+<span id="template-management"></span><h2>Template Management<a class="headerlink" href="#module-template_manager" title="Link to this heading"></a></h2>
+<p>Template Management Module</p>
+<p>Handles loading and validation of:
+- Document templates
+- User configuration files</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="template_manager.load_template">
+<span class="sig-name descname"><span class="pre">load_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/template_manager.html#load_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#template_manager.load_template" title="Link to this definition"></a></dt>
+<dd><p>Loads and validates PDF template configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to template.json file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Validated template configuration</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>dict</em></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If template file is missing</p></li>
+<li><p><strong>ValueError</strong> – For invalid template structure</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="template_manager.load_user_data">
+<span class="sig-name descname"><span class="pre">load_user_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/template_manager.html#load_user_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#template_manager.load_user_data" title="Link to this definition"></a></dt>
+<dd><p>Loads user configuration data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Path to user.json file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>User configuration data</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="template_manager.validate_template">
+<span class="sig-name descname"><span class="pre">validate_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/template_manager.html#validate_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#template_manager.validate_template" title="Link to this definition"></a></dt>
+<dd><p>Validates template structure and required fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>template</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Template configuration to validate</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – For missing required fields</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="System Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, E.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
