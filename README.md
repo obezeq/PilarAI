@@ -101,6 +101,8 @@ pip install openai python-dotenv markdown fpdf2 beautifulsoup4
 
 1. Create `.env` file:  
 ```env
+OPENAI_ORGANIZATION=your_openai_organization_key_here
+OPENAI_PROJECT=your_openai_project_key_here
 OPENAI_API_KEY=your_openai_key_here
 ```
 
