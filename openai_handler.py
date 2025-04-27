@@ -1,10 +1,33 @@
+"""
+OpenAI Integration Module
+
+Handles communication with OpenAI's API to generate academic solutions.
+Requires valid OpenAI API credentials in .env file.
+"""
+
 from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-def generate_solution(task):
+def generate_solution(task: str) -> str:
+    """Generates academic solution for given task using OpenAI's GPT-4 model.
+    
+    Args:
+        task: User-provided academic task/question/problem statement
+        
+    Returns:
+        str: Formatted Markdown solution
+        
+    Raises:
+        ValueError: If OpenAI API key is missing
+        Exception: For general API communication errors
+    
+    Example:
+        >>> generate_solution("Explain quantum computing")
+        "# Quantum Computing\\n\\nQuantum computing is..."
+    """
     client = OpenAI(
         api_key=os.getenv("OPENAI_API_KEY"),
         organization=os.getenv("OPENAI_ORGANIZATION", ""),

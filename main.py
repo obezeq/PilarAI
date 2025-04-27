@@ -1,3 +1,13 @@
+"""
+PilarAI - Smart Academic Assistant Main Module
+
+This module serves as the entry point for the PilarAI application. It coordinates:
+- Template loading
+- User input handling
+- AI solution generation
+- PDF document creation
+"""
+
 import openai_handler
 import template_manager
 import pdf_generator
@@ -5,6 +15,19 @@ import json
 import os
 
 def main():
+    """Main execution flow for PilarAI academic assistant application.
+    
+    Handles:
+    1. Template configuration loading
+    2. User task input collection
+    3. AI-powered solution generation
+    4. PDF document creation
+    5. Error handling and user feedback
+    
+    Raises:
+        FileNotFoundError: If template configuration files are missing
+        Exception: General errors during solution generation or PDF creation
+    """
     # Initial configuration
     print("🚀 Welcome to PilarAI - Your smart academic assistant\n")
     
