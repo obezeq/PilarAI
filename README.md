@@ -167,14 +167,71 @@ python main.py
 2. Enter your task:  
 ```
 📝 Enter the task you need to solve:
-> Explain the main components of an operating system
+> List utilities related to information management that you would recommend to install and explain why you have chosen them (minimum 5 utilities).
 ```
 
 3. Results saved in:  
 ```
 results/
-├── solution.txt
-└── solution.pdf
+├── solution.txt # Markdown formatted solution
+└── solution.pdf # Professionally formatted PDF
+```
+
+---
+
+## 📚 **Example Workflow**
+
+### Sample Session
+```bash
+🚀 Welcome to PilarAI - Your smart academic assistant
+
+📝 Enter the task you need to solve:
+> List utilities related to information management that you would recommend to install and explain why you have chosen them (minimum 5 utilities)
+
+⚡ Generating solution...
+🎨 Creating PDF document...
+
+✅ Task completed! Check the files in the 'results' folder
+```
+
+### Generated Files Preview
+**solution.txt** ([view sample](https://github.com/obezeq/PilarAI/blob/main/results/solution.txt)):
+```markdown
+# Recommended Utilities for Information Management
+
+Information Management (IM) is a crucial aspect of any organization or business. It involves organizing, retrieving, acquiring, and maintaining information. It is essential for decision-making processes and overall operational efficiency. There are numerous utilities designed to aid in this process; the following are five I would highly recommend:
+
+[...]
+```
+
+**solution.pdf** ([view sample PDF](https://github.com/obezeq/PilarAI/blob/main/results/solution.pdf))  
+*Professional PDF with your institutional formatting*
+
+---
+
+## 🖥️ **Multi-Platform Support**
+
+### Windows Users
+1. Install [Python from Microsoft Store](https://apps.microsoft.com/search?query=Python+3)
+2. Right-click in project folder → "Open in Terminal"
+3. Follow standard instructions
+
+### macOS/Linux Users
+```bash
+# Install required dependencies
+brew install python git
+
+# Run with python3 explicitly
+python3 main.py
+```
+
+### Cloud Execution
+1. Upload project to [Google Colab](https://colab.research.google.com/)
+2. Run:
+```python
+!git clone https://github.com/obezeq/PilarAI.git
+%cd PilarAI
+!python main.py
 ```
 
 ---
